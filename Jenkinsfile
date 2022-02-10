@@ -11,7 +11,7 @@ pipeline {
     }
 
     environment {
-        JDK_TOOL_VERSION = 'JDK.1.8.0_265'
+        JDK_TOOL_VERSION = 'JDK.9.0.4'
         DEVELOP_BRANCH = 'develop'
     }
 
