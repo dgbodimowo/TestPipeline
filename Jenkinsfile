@@ -1,53 +1,21 @@
 pipeline {
     agent any
 
-    options {
-        timestamps()
-        disableConcurrentBuilds()
-    }
-
-    environment {
-        DEVELOP_BRANCH = 'develop'
-    }
-
     stages {
-        stage(initialize) {
-            steps {
-                echo "initialize"
-            }
-        }
-
         stage('Build') {
             steps {
-                echo "This stage is for Build"
+                echo 'Building..'
             }
         }
-
-        stage{'Test'} {
+        stage('Test') {
             steps {
-                echo "This stage is for test"
+                echo 'Testing..'
             }
         }
-
-        stage('Infrastructure Build') {
+        stage('Deploy') {
             steps {
-                echo " This stage is for infrastructure build"
+                echo 'Deploying....'
             }
         }
-
-        stage('Deployment to Staging Env') {
-            steps {
-                echo "This stage is to deploy into the staging environment"
-            }
-        }
-
-        stage('Deployment to Production') {
-            steps {
-                echo "This stage is to deploy into Production Environment"
-            }
-        }
-            
-        
     }
-
 }
