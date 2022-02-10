@@ -51,13 +51,8 @@ pipeline {
                 echo "This stage is to deploy into Production Environment"
             }
         }
-
-        post {
-            always {
-                echo "Successful"
-                cleanWs()
-            }
-        }
+            
+        
     }
 
 }
