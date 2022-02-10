@@ -1,17 +1,12 @@
 pipeline {
     agent any
 
-    tools {
-        jdk 'JAVA'
-    }
-
     options {
         timestamps()
         disableConcurrentBuilds()
     }
 
     environment {
-        JDK_TOOL_VERSION = 'JDK.9.0.4'
         DEVELOP_BRANCH = 'develop'
     }
 
